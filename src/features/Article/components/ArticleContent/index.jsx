@@ -7,7 +7,7 @@ ArticleContent.propTypes = {
 };
 
 function ArticleContent({ article }) {
-  return <Box pt={5}></Box>;
+  return <Box pt={5}>content</Box>;
 }
 
 export default ArticleContent;

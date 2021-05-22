@@ -1,7 +1,6 @@
 import { Box, Container, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
-import "./styles.scss";
 
 const useStyle = makeStyles((theme) => ({
   root: {},
@@ -20,7 +19,7 @@ function Footer() {
         <Box padding={4}>
           <ul>
             <Link className={classes.link} to="/">
-              Taza @ 2021
+              Taza © 2021
             </Link>
             <Link className={classes.link} to="/">
               Quyền riêng tư và pháp lý

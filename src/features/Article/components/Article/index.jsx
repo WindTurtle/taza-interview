@@ -9,6 +9,17 @@ Article.propTypes = {
 };
 const useStyle = makeStyles((theme) => ({
   root: {},
+  thumbnail: {
+    "&>img": {
+      height: "300px",
+      objectFit: "cover",
+      borderRadius: "10px",
+      transition: ".5s ease",
+      "&:hover": {
+        opacity: "0.7",
+      },
+    },
+  },
   dateUpload: {
     marginRight: theme.spacing(1),
     fontSize: "12px",
@@ -36,13 +47,8 @@ function Article({ article }) {
       onClick={handleClick}
       style={{ textAlign: "left", cursor: "pointer" }}
     >
-      <Box padding={1} minHeight={300}>
-        <img
-          src={thumbnailUrl}
-          alt={article.id}
-          style={{ height: "300px", objectFit: "cover", borderRadius: "10px" }}
-          width="100%"
-        />
+      <Box padding={1} minHeight={300} className={classes.thumbnail}>
+        <img src={thumbnailUrl} alt={article.id} width="100%" />
       </Box>
       <Box padding={1}>
         <Typography padding={1} variant="h5" style={{ fontWeight: "bold" }}>
